@@ -1,6 +1,0 @@
----
-- name: Install/Uninstall CrowdStrike via Minio
-  hosts: your_target_hosts
-  become: yes
-  roles:
-    - Crowdstrike

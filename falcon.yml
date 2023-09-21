@@ -1,0 +1,5 @@
+---
+- name: Install/Uninstall CrowdStrike via Minio
+  hosts: 172.31.45.224
+  roles:
+    - falcon

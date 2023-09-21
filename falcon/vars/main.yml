@@ -1,0 +1,4 @@
+---
+crowdstrike_minio_url: "http://18.119.132.137:9000/ctt/apacheds-2.0.0.AM26-amd64.deb"
+crowdstrike_install_dir: "/opt/apacheds.deb"
+# vars file for falcon
