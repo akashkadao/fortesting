@@ -1,0 +1,3 @@
+---
+crowdstrike_minio_url: "http://minio-server-url/path/to/crowdstrike-package.rpm"
+crowdstrike_install_dir: "/opt/crowdstrike"

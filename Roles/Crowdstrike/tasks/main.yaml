@@ -1,0 +1,8 @@
+---
+- name: Ensure CrowdStrike is installed
+  include_tasks: install.yml
+  when: crowdstrike_installed is not defined or not crowdstrike_installed
+
+- name: Ensure CrowdStrike is uninstalled
+  include_tasks: uninstall.yml
+  when: crowdstrike_installed | default(false) and not crowdstrike_uninstalled

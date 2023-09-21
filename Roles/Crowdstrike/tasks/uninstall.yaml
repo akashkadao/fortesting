@@ -1,0 +1,19 @@
+---
+- name: Uninstall CrowdStrike on RedHat
+  ansible.builtin.yum:
+    name: "{{ crowdstrike_minio_url }}"
+    state: absent
+  when: is_redhat
+  become: true
+
+- name: Uninstall CrowdStrike on Debian
+  ansible.builtin.apt:
+    name: "{{ crowdstrike_minio_url }}"
+    state: absent
+  when: is_debian
+  become: true
+
+- name: Mark CrowdStrike as uninstalled
+  set_fact:
+    crowdstrike_uninstalled: true
+  changed_when: true

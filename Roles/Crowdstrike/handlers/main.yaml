@@ -1,0 +1,8 @@
+---
+- name: Restart CrowdStrike Service
+  ansible.builtin.service:
+    name: crowdstrike
+    state: restarted
+  async: 10
+  poll: 0
+  listen: "CrowdStrike package changed"
